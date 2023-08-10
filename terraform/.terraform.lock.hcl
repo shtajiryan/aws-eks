@@ -23,3 +23,24 @@ provider "registry.terraform.io/hashicorp/aws" {
     "zh:f5da95bbd44809534c6678e9b1ae0b390331a5619f2ae353c6b88e96ae855cc0",
   ]
 }
+
+provider "registry.terraform.io/mumoshu/eksctl" {
+  version     = "0.17.0"
+  constraints = "0.17.0"
+  hashes = [
+    "h1:sjLhfs39M9jPIoAL3ra/munkHQCJljlkrPuzh/cfU3A=",
+    "zh:2492ab360603266bac0391714ae6a21018f2b11c1f55f75c12ab10b7cb802bbf",
+    "zh:5a98e3c82bdde41d4bca320a2608ced0641317cb1e4132fb4a1a13d16d2ae09b",
+    "zh:75c6b18c1c3eae85e7a7a1d8ec902d9858c814347fbade9cccc6515959832154",
+    "zh:815b1bf19e6ee402df72086a2286e8fa51d28285e86a10cc99b578cf8828cb99",
+    "zh:8cba0aba129026cddb05c2bd0b4f4fd3dbc814b052fa1ff849e0c2f5cf99da68",
+    "zh:aeccd91409ea515f82e9f806c308b63e74debf7a77f21aa2ce62aac0d331f369",
+    "zh:b7759e1c84b0f8e64708db154664a73429b5535a70c33233e3c14543ee539e99",
+    "zh:b9297457617ea58ef420c35f800e1e488bb6ee3c676d39c15504a03667a53d1f",
+    "zh:dc4f0bfe11502446de3f84b5daad6dbcce6d5d0420630cc6b5463496be13eaac",
+    "zh:e482a0ed8dee4704325f6ac32f1decab3b7ea2499b5c32e1eba946740ddb8db3",
+    "zh:eb1586f3785e65a90d0f19983b297775e623c0d9132fc06f470837fa97f2eaa4",
+    "zh:ee580a87cf4554ef8fa59231e30e90428b6f1fa3cd92c424bdec11096b78c3dc",
+    "zh:ef69b26c9f5e64e5627b66ad0fd23eea7f4ac64c05f0d7fde6976903b1c4d522",
+  ]
+}
