@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "5.11.0"
     }
+    ansible = {
+      source = "ansible/ansible"
+      version = "1.1.0"
+    }
     eksctl = {
       source = "mumoshu/eksctl"
       version = "0.17.0"
@@ -11,10 +15,4 @@ terraform {
   }
 
   backend "s3" {}
-}
-
-provider "aws" {
-   region     = var.aws_region
-   access_key = var.aws_access_key
-   secret_key = var.aws_secret_key
 }
