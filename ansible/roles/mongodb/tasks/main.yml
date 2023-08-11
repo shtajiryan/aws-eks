@@ -1,0 +1,43 @@
+- name: Import MongoDB GPG key
+  apt_key:
+    url: https://pgp.mongodb.com/server-6.0.asc
+    state: present
+
+- name: Add MongoDB repository
+  apt_repository:
+    repo: "deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse"
+    state: present
+
+- name: Add custom mongod.conf
+  copy:
+    src: mongod.conf
+    dest: /etc/mongod.conf
+
+- name: Install MongoDB
+  apt:
+    name: mongodb-org
+    state: present
+    update_cache: yes
+
+- name: Install pip
+  apt:
+    name: python3-pip
+    state: present
+    update_cache: yes
+
+- name: Install pymongo python package
+  ansible.builtin.pip:
+    name: pymongo
+
+- name: Start and enable MongoDB
+  service:
+    name: mongod
+    state: started
+    enabled: yes    
+
+- name: Create MongoDB root user admin
+  mongodb_user:
+    database: "mongodb"
+    name: "admin"
+    password: "admin"
+    roles: "dbAdmin"

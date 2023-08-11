@@ -1,0 +1,8 @@
+---
+- name: Install MongoDB
+  hosts: all
+  remote_user: ubuntu
+  become: true
+
+  roles:
+  - mongodb
